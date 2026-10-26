@@ -42,3 +42,7 @@ nav a:hover {
     margin-inline: auto;
     padding-inline: 1rem;
 }
+
+header {
+    padding-block: 1.5rem;
+}
