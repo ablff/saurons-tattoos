@@ -1,4 +1,6 @@
 :root {
+    --font-heading: "Pirata One", sans-serif;
+    --font-body: "Inter", system-ui, sans-serif;
     --color-background: #0d0d0d;
     --color-background-alt: #1a1a1a;
     --color-text: #f2f2f2;
@@ -11,10 +13,13 @@ body {
     background-color: var(--color-background);
     color: var(--color-text);
     margin: 0;
+    font-family: var(--font-body);
+    line-height: 1.6;
 }
 
 h1 {
     color: var(--color-gold);
+    font-family: var(--font-heading);
 }
 
 nav {
