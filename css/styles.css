@@ -10,6 +10,7 @@
 body {
     background-color: var(--color-background);
     color: var(--color-text);
+    margin: 0;
 }
 
 h1 {
@@ -28,4 +29,16 @@ nav a {
 
 nav a:hover {
     color: var(--color-accent);
+}
+
+.page-section {
+    background-color: var(--color-background-alt);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.container {
+    max-width: 60rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
 }
