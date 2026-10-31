@@ -17,9 +17,14 @@ body {
     line-height: 1.6;
 }
 
-nav {
-    display: flex;
+.nav {
+    display: none;
     gap: 1.5rem;
+}
+
+.nav--open {
+    display: flex;
+    flex-direction: column;
 }
 
 nav a {
@@ -68,4 +73,8 @@ header {
 .hero__title {
     color: var(--color-gold);
     font-family: var(--font-heading);
+}
+
+.nav-toggle {
+    display: flex;
 }
