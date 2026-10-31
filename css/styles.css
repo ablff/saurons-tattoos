@@ -25,6 +25,11 @@ body {
 .nav--open {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left:0;
+    background-color: var(--color-background-alt);
+    padding: 1rem;
 }
 
 nav a {
@@ -50,6 +55,7 @@ nav a:hover {
 
 header {
     padding-block: 1.5rem;
+    position: relative;
 }
 
 .hero {
@@ -75,6 +81,13 @@ header {
     font-family: var(--font-heading);
 }
 
-.nav-toggle {
-    display: flex;
+@media (min-width: 48rem) {
+    .nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
 }
