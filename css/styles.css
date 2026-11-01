@@ -97,9 +97,21 @@ header {
 }
 
 .gallery__image {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    aspect-ratio: 4/5;
+    object-fit: cover;
     display: block;
+}
+
+.gallery__item {
+    margin: 0;
+}
+
+.gallery__grid  {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
 @media (min-width: 48rem) {
@@ -110,5 +122,9 @@ header {
 
     .nav-toggle {
         display: none;
+    }
+
+    .gallery__grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
