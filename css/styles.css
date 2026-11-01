@@ -106,6 +106,8 @@ header {
 
 .gallery__item {
     margin: 0;
+    padding: 0.5rem;
+    background-color: var(--color-frame);
 }
 
 .gallery__grid  {
