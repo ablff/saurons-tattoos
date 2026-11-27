@@ -3,160 +3,602 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0808">
+
+    <meta
+        name="description"
+        content="Sauron's Tattoos — tatuagens blackwork, artes autorais e projetos personalizados em Campinas, SP."
+    >
+
     <title>Sauron's Tattoos | Blackwork em Campinas</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Pirata+One&display=swap"
-        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&family=Inter:wght@400;500;600;700&family=Pirata+One&display=swap"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="css/styles.css">
+
     <script src="js/main.js" defer></script>
+    <script src="js/grimoire.js" defer></script>
 </head>
 
 <body>
-    <header class="container">
-        <button class="nav-toggle" type="button" aria-label="Abrir menu do estúdio">
-            ☰
+    <div class="grimoire-background" aria-hidden="true">
+        <canvas class="grimoire-background__canvas"></canvas>
+    </div>
+
+    <header class="container site-header">
+        <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Abrir menu do estúdio"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
-        <nav class="nav">
+
+        <nav
+            class="nav"
+            id="primary-navigation"
+            aria-label="Navegação principal"
+        >
             <a href="#gallery">Galeria</a>
             <a href="#budget">Orçamento</a>
+            <a href="#care">Cuidados</a>
             <a href="#location">Localização</a>
         </nav>
     </header>
 
     <main class="container">
+        <section class="hero" aria-labelledby="hero-title">
+            <div
+                class="hero__ornament hero__ornament--top"
+                aria-hidden="true"
+            >
+                ✦ &nbsp; ✧ &nbsp; ✦
+            </div>
 
-        <section class="hero">
-            <h1 class="hero__title">Sauron's Tattoos</h1>
-            <p class="hero__text">Onde sua história ganha marca!</p>
-            <a class="hero__button" href="#budget">Pedir orçamento</a>
-        </section>
+            <div class="hero__logo-stage">
+                <img
+                    class="hero__logo"
+                    src="assets/images/brand/saurons_tattoos_logo.png"
+                    alt="Logo Sauron's Tattoos"
+                    width="512"
+                    height="512"
+                    fetchpriority="high"
+                >
 
-        <section class="page-section" id="gallery">
-            <h2>Galeria</h2>
-            <p>Artes na pele e artes disponíveis do meu trabalho</p>
-            <div class="gallery__grid">
-                <figure class="gallery__item">
-                    <img
-                        class="gallery__image"
-                        src="assets/images/gallery/tattoo-sol-lua-borboleta.webp"
-                        alt="Tatuagem em estilo fine line no braço feminino com elementos místicos: sol, lua, estrelas, olho grego e uma borboleta"
-                        width="800"
-                        height="1067"
-                        loading="lazy"
-                    >
-                </figure>
+                <div class="hero__reflection" aria-hidden="true"></div>
 
-                <figure class="gallery__item">
-                    <img
-                        class="gallery__image"
-                        src="assets/images/gallery/tattoo-berserk-caveira.webp"
-                        alt="Tatuagem em preto na coxa de uma caveira com a Marca do Sacrifício de Berserk na testa, cercada por uma corrente com espinhos"
-                        width="800"
-                        height="1067"
-                        loading="lazy"
-                    >
-                </figure>
+                <canvas
+                    class="hero__eye-canvas"
+                    aria-hidden="true"
+                ></canvas>
 
-                <figure class="gallery__item">
-                    <img
-                        class="gallery__image"
-                        src="assets/images/gallery/tattoo-caveira-derretendo.webp"
-                        alt="Tatuagem blackwork no braço de uma caveira de perfil com efeito de derretimento e contornos marcados"
-                        width="800"
-                        height="1067"
-                        loading="lazy"
-                    >
-                </figure>
+                <canvas
+                    class="hero__transition-canvas"
+                    aria-hidden="true"
+                ></canvas>
+            </div>
 
-                <figure class="gallery__item">
-                    <img
-                        class="gallery__image"
-                        src="assets/images/gallery/tattoo-one-piece-simbolos.webp"
-                        alt="Tatuagem na perna com a sequência vertical de Jolly Rogers e símbolos dos Chapéus de Palha do anime One Piece"
-                        width="800"
-                        height="1067"
-                        loading="lazy"
-                    >
-                </figure>
+            <h1 class="visually-hidden" id="hero-title">
+                Sauron's Tattoos
+            </h1>
 
-                <figure class="gallery__item">
-                    <img
-                        class="gallery__image"
-                        src="assets/images/gallery/arte-coruja-circulo.webp"
-                        alt="Ilustração de coruja em pontilhismo e hachuras com olhar atento e garras expostas sobre um círculo ao fundo"
-                        width="800"
-                        height="1200"
-                        loading="lazy"
-                    >
-                </figure>
+            <p class="hero__text">
+                Onde sua história ganha marca.
+            </p>
 
-                <figure class="gallery__item">
-                    <img
-                        class="gallery__image"
-                        src="assets/images/gallery/tattoo-caveira-fungos.webp"
-                        alt="Tatuagem na perna de uma caveira em blackwork com diversos cogumelos e fungos brotando do topo da cabeça"
-                        width="800"
-                        height="1067"
-                        loading="lazy"
-                    >
-                </figure>
+            <a class="hero__button" href="#budget">
+                Pedir orçamento
+            </a>
 
-                <figure class="gallery__item">
-                    <img
-                        class="gallery__image"
-                        src="assets/images/gallery/arte-leopardo.webp"
-                        alt="Desenho em pontilhismo de um leopardo em postura de caça e movimento estilizado"
-                        width="800"
-                        height="1200"
-                        loading="lazy"
-                    >
-                </figure>
-
-                <figure class="gallery__item">
-                    <img
-                        class="gallery__image"
-                        src="assets/images/gallery/arte-caveira-rosas.webp"
-                        alt="Ilustração em pontilhismo de uma caveira de perfil decorada com rosas e folhas ao redor"
-                        width="800"
-                        height="1200"
-                        loading="lazy"
-                    >
-                </figure>
-
-                <figure class="gallery__item">
-                    <img
-                        class="gallery__image"
-                        src="assets/images/gallery/tattoo-caveira-folha.webp"
-                        alt="Tatuagem blackwork na panturrilha de uma caveira integrada a folhagens e traços marcados"
-                        width="800"
-                        height="1067"
-                        loading="lazy"
-                    >
-                </figure>
-
+            <div
+                class="hero__ornament hero__ornament--bottom"
+                aria-hidden="true"
+            >
+                — &nbsp; ✧ &nbsp; —
             </div>
         </section>
 
-        <section class="page-section" id="budget">
-            <h2>Orçamento</h2>
-            <p>Orçamento no formulário abaixo</p>
-        </section>
+        <details
+            class="page-section page-section--accordion"
+            id="gallery"
+            name="site-sections"
+            aria-labelledby="gallery-title"
+        >
+            <summary class="section-summary">
+                <div class="section-heading">
+                    <span class="section-heading__eyebrow">
+                        TRABALHOS &amp; CRIAÇÕES
+                    </span>
 
-        <section class="page-section" id="location">
-            <h2>Localização</h2>
-            <p>Endereço do estúdio abaixo no mapa!</p>
-        </section>
+                    <h2 id="gallery-title">Galeria</h2>
+
+                    <p>
+                        Artes na pele e artes disponíveis do meu trabalho.
+                    </p>
+                </div>
+
+                <span
+                    class="section-toggle-icon"
+                    aria-hidden="true"
+                ></span>
+            </summary>
+
+            <div class="section-content" id="gallery-content">
+                <div class="gallery__grid">
+                    <figure class="gallery__item">
+                        <img
+                            class="gallery__image"
+                            src="assets/images/gallery/tattoo-sol-lua-borboleta.webp"
+                            data-full="assets/images/originals/tattoo-sol-lua-borboleta.jpg"
+                            alt="Tatuagem em estilo fine line no braço feminino com elementos místicos: sol, lua, estrelas, olho grego e uma borboleta"
+                            width="800"
+                            height="1067"
+                            loading="lazy"
+                        >
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img
+                            class="gallery__image"
+                            src="assets/images/gallery/tattoo-berserk-caveira.webp"
+                            data-full="assets/images/originals/tattoo-berserk-caveira.jpg"
+                            alt="Tatuagem em preto na coxa de uma caveira com a Marca do Sacrifício de Berserk na testa, cercada por uma corrente com espinhos"
+                            width="800"
+                            height="1067"
+                            loading="lazy"
+                        >
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img
+                            class="gallery__image"
+                            src="assets/images/gallery/tattoo-caveira-derretendo.webp"
+                            data-full="assets/images/originals/tattoo-caveira-derretendo.jpg"
+                            alt="Tatuagem blackwork no braço de uma caveira de perfil com efeito de derretimento e contornos marcados"
+                            width="800"
+                            height="1067"
+                            loading="lazy"
+                        >
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img
+                            class="gallery__image"
+                            src="assets/images/gallery/tattoo-one-piece-simbolos.webp"
+                            data-full="assets/images/originals/tattoo-one-piece-simbolos.jpg"
+                            alt="Tatuagem na perna com a sequência vertical de Jolly Rogers e símbolos dos Chapéus de Palha do anime One Piece"
+                            width="800"
+                            height="1067"
+                            loading="lazy"
+                        >
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img
+                            class="gallery__image"
+                            src="assets/images/gallery/arte-coruja-circulo.webp"
+                            data-full="assets/images/originals/arte-coruja-circulo.jpg"
+                            alt="Ilustração de coruja em pontilhismo e hachuras com olhar atento e garras expostas sobre um círculo ao fundo"
+                            width="800"
+                            height="1200"
+                            loading="lazy"
+                        >
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img
+                            class="gallery__image"
+                            src="assets/images/gallery/tattoo-caveira-fungos.webp"
+                            data-full="assets/images/originals/tattoo-caveira-fungos.jpg"
+                            alt="Tatuagem na perna de uma caveira em blackwork com diversos cogumelos e fungos brotando do topo da cabeça"
+                            width="800"
+                            height="1067"
+                            loading="lazy"
+                        >
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img
+                            class="gallery__image"
+                            src="assets/images/gallery/arte-leopardo.webp"
+                            data-full="assets/images/originals/arte-leopardo.jpg"
+                            alt="Desenho em pontilhismo de um leopardo em postura de caça e movimento estilizado"
+                            width="800"
+                            height="1200"
+                            loading="lazy"
+                        >
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img
+                            class="gallery__image"
+                            src="assets/images/gallery/arte-caveira-rosas.webp"
+                            data-full="assets/images/originals/arte-caveira-rosas.jpg"
+                            alt="Ilustração em pontilhismo de uma caveira de perfil decorada com rosas e folhas ao redor"
+                            width="800"
+                            height="1200"
+                            loading="lazy"
+                        >
+                    </figure>
+
+                    <figure class="gallery__item">
+                        <img
+                            class="gallery__image"
+                            src="assets/images/gallery/tattoo-caveira-folha.webp"
+                            data-full="assets/images/originals/tattoo-caveira-folha.jpg"
+                            alt="Tatuagem blackwork na panturrilha de uma caveira integrada a folhagens e traços marcados"
+                            width="800"
+                            height="1067"
+                            loading="lazy"
+                        >
+                    </figure>
+                </div>
+            </div>
+        </details>
+
+        <details
+            class="page-section page-section--compact page-section--accordion"
+            id="budget"
+            name="site-sections"
+            aria-labelledby="budget-title"
+        >
+            <summary class="section-summary">
+                <div class="section-heading">
+                    <span class="section-heading__eyebrow">
+                        DÊ FORMA À SUA IDEIA
+                    </span>
+
+                    <h2 id="budget-title">Orçamento</h2>
+
+                    <p>
+                        Trabalho exclusivamente em preto e branco.
+                        Conte sua ideia e receba um orçamento pelo WhatsApp.
+                    </p>
+                </div>
+
+                <span
+                    class="section-toggle-icon"
+                    aria-hidden="true"
+                ></span>
+            </summary>
+
+            <div class="section-content" id="budget-content">
+                <form class="budget-form" id="budget-form">
+                    <div class="budget-form__grid">
+                        <label class="field">
+                            <span>Seu nome</span>
+                            <input
+                                type="text"
+                                name="nome"
+                                autocomplete="name"
+                                required
+                            >
+                        </label>
+
+                        <label class="field">
+                            <span>Telefone / WhatsApp</span>
+                            <input
+                                type="tel"
+                                name="telefone"
+                                autocomplete="tel"
+                                required
+                            >
+                        </label>
+
+                        <label class="field">
+                            <span>Parte do corpo</span>
+                            <input
+                                type="text"
+                                name="parte"
+                                placeholder="Ex.: antebraço, costela, panturrilha"
+                                required
+                            >
+                        </label>
+
+                        <label class="field">
+                            <span>Tamanho aproximado</span>
+                            <input
+                                type="text"
+                                name="tamanho"
+                                placeholder="Ex.: 10 cm, meia manga, palma da mão"
+                                required
+                            >
+                        </label>
+
+                        <label class="field">
+                            <span>Estilo</span>
+                            <input
+                                type="text"
+                                name="estilo"
+                                placeholder="Ex.: blackwork, fine line, dark fantasy"
+                                required
+                            >
+                        </label>
+
+                        <label class="field">
+                            <span>Data / prazo</span>
+                            <input
+                                type="text"
+                                name="data"
+                                placeholder="Ex.: esse mês, fim de semana, sem pressa"
+                                required
+                            >
+                        </label>
+
+                        <label class="field field--full">
+                            <span>Detalhes da ideia</span>
+                            <textarea
+                                name="detalhes"
+                                rows="5"
+                                placeholder="Descreva a ideia, referências, símbolos, personagem, local do corpo, etc."
+                                required
+                            ></textarea>
+                        </label>
+                    </div>
+
+                    <div class="budget-form__actions">
+                        <button
+                            class="hero__button"
+                            type="submit"
+                        >
+                            Enviar para o WhatsApp
+                        </button>
+
+                        <p class="budget-form__hint">
+                            Ao enviar, a conversa já abre com todas as informações prontas.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </details>
+
+        <details
+            class="page-section page-section--compact page-section--accordion"
+            id="care"
+            name="site-sections"
+            aria-labelledby="care-title"
+        >
+            <summary class="section-summary">
+                <div class="section-heading">
+                    <span class="section-heading__eyebrow">
+                        CUIDE DA SUA MARCA
+                    </span>
+
+                    <h2 id="care-title">Cuidados</h2>
+
+                    <p>
+                        Algumas orientações importantes para o período de cicatrização.
+                    </p>
+                </div>
+
+                <span
+                    class="section-toggle-icon"
+                    aria-hidden="true"
+                ></span>
+            </summary>
+
+            <div class="section-content" id="care-content">
+                <div class="care-intro">
+                    <span class="care-intro__symbol" aria-hidden="true">
+                        ✧
+                    </span>
+
+                    <p>
+                        Uma tatuagem também exige cuidados depois da sessão.
+                        Respeite o tempo de cicatrização e siga as orientações
+                        recebidas durante o atendimento.
+                    </p>
+                </div>
+
+                <div class="care-grid">
+                    <article class="care-card">
+                        <span class="care-card__symbol" aria-hidden="true">
+                            ᚠ
+                        </span>
+
+                        <h3>Higienização</h3>
+
+                        <p>
+                            Lave as mãos antes de tocar na tatuagem.
+                            Faça a limpeza delicadamente, conforme a orientação
+                            recebida, sem esfregar a pele.
+                        </p>
+                    </article>
+
+                    <article class="care-card">
+                        <span class="care-card__symbol" aria-hidden="true">
+                            ☽
+                        </span>
+
+                        <h3>Hidratação</h3>
+
+                        <p>
+                            Utilize somente o produto recomendado para o cuidado
+                            da tatuagem, aplicando uma camada fina quando indicado.
+                        </p>
+                    </article>
+
+                    <article class="care-card">
+                        <span class="care-card__symbol" aria-hidden="true">
+                            ⚚
+                        </span>
+
+                        <h3>Proteção</h3>
+
+                        <p>
+                            Evite coçar, arrancar casquinhas ou esfregar a região.
+                            Também evite piscina, mar e imersão durante a cicatrização.
+                        </p>
+                    </article>
+
+                    <article class="care-card">
+                        <span class="care-card__symbol" aria-hidden="true">
+                            ☼
+                        </span>
+
+                        <h3>Sol</h3>
+
+                        <p>
+                            Proteja a tatuagem recém-feita da exposição solar direta.
+                            Depois de cicatrizada, mantenha o uso de protetor solar.
+                        </p>
+                    </article>
+                </div>
+
+                <p class="care-disclaimer">
+                    Os cuidados podem variar conforme o tipo de curativo e a
+                    cicatrização. Siga sempre as instruções específicas recebidas
+                    durante o atendimento.
+                </p>
+            </div>
+        </details>
+
+        <details
+            class="page-section page-section--compact page-section--accordion"
+            id="location"
+            name="site-sections"
+            aria-labelledby="location-title"
+        >
+            <summary class="section-summary">
+                <div class="section-heading">
+                    <span class="section-heading__eyebrow">
+                        ONDE ME ENCONTRAR
+                    </span>
+
+                    <h2 id="location-title">Localização</h2>
+
+                    <p>
+                        Encontre o estúdio na Galeria Barão Velho, em Campinas.
+                    </p>
+                </div>
+
+                <span
+                    class="section-toggle-icon"
+                    aria-hidden="true"
+                ></span>
+            </summary>
+
+            <div class="section-content" id="location-content">
+                <div class="location-card">
+                    <div class="location-card__map">
+                        <iframe
+                            src="https://www.google.com/maps?q=Rua%20Bar%C3%A3o%20de%20Jaguara%2C%20936%2C%20Galeria%20Bar%C3%A3o%20Velho%2C%20Centro%2C%20Campinas%20SP&amp;output=embed"
+                            title="Mapa da localização da Sauron's Tattoos em Campinas"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+
+                    <div class="location-card__content">
+                        <span
+                            class="location-card__symbol"
+                            aria-hidden="true"
+                        >
+                            ✦
+                        </span>
+
+                        <h3>Sauron's Tattoos</h3>
+
+                        <p class="location-card__address">
+                            Rua Barão de Jaguara, 936<br>
+                            Galeria Barão Velho<br>
+                            Centro — Campinas, SP
+                        </p>
+
+                        <a
+                            class="location-card__button"
+                            href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Bar%C3%A3o%20de%20Jaguara%2C%20936%2C%20Galeria%20Bar%C3%A3o%20Velho%2C%20Centro%2C%20Campinas%20SP"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Abrir no Google Maps ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </details>
     </main>
 
-    <footer class="container">
+    <footer class="container site-footer">
+        <span class="site-footer__rule" aria-hidden="true"></span>
+
         <p>&copy; 2026 Sauron's Tattoos</p>
+
+        <span class="site-footer__rule" aria-hidden="true"></span>
     </footer>
 
-    <dialog class="lightbox">
-        <button class="lightbox__close" type="button" aria-label="Fechar imagem">✕</button>
-        <img class="lightbox__image" src="" alt="">
+    <dialog
+        class="lightbox"
+        aria-label="Imagem ampliada da galeria"
+    >
+        <button
+            class="lightbox__zoom-toggle"
+            type="button"
+            aria-label="Ativar lupa"
+            aria-pressed="false"
+            title="Ativar lupa"
+        >
+            <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+            >
+                <circle cx="10.8" cy="10.8" r="6.6"></circle>
+                <path d="m16 16 5 5"></path>
+                <path d="M10.8 7.5v6.6"></path>
+                <path d="M7.5 10.8h6.6"></path>
+            </svg>
+        </button>
+
+        <button
+            class="lightbox__reset"
+            type="button"
+            aria-label="Restaurar tamanho original"
+            title="Restaurar tamanho original"
+        >
+            1:1
+        </button>
+
+        <button
+            class="lightbox__close"
+            type="button"
+            aria-label="Fechar imagem"
+            title="Fechar"
+        >
+            ✕
+        </button>
+
+        <div
+            class="lightbox__viewport"
+            aria-label="Visualizador de imagem"
+        >
+            <img
+                class="lightbox__image"
+                src=""
+                alt=""
+                draggable="false"
+            >
+        </div>
+
+        <p class="lightbox__hint">
+            Ative a lupa e clique na imagem para ampliar.
+            A roda do mouse também controla o zoom.
+        </p>
     </dialog>
+
+    <div class="cursor-light" aria-hidden="true"></div>
 </body>
 
 </html>
